@@ -59,4 +59,11 @@ public class MyBatisPlusConfig {
         return performanceInterceptor;
     }
 
+    /**
+     * 条件构造器
+     */
+
+
+
+
 }

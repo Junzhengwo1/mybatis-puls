@@ -27,6 +27,7 @@ public class User {
     //在更新操作的时候更新
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
+    //乐观锁需要配置的 version
     @Version
     private Integer version;
 

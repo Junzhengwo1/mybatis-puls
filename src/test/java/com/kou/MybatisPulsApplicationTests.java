@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,6 +26,13 @@ class MybatisPulsApplicationTests {
         for (User user : users) {
             System.out.println(user);
         }
+
+        Collections.swap(users,(users.size()-1),0);
+        for (User user : users) {
+            System.out.println(user);
+        }
+
+
     }
 
 
@@ -111,7 +119,7 @@ class MybatisPulsApplicationTests {
     @Test
     void testDeleteMap(){
         HashMap<String, Object> map = new HashMap<>();
-        map.put("name","天后3");
+        map.put("name","王");
         userMapper.deleteByMap(map);
     }
 
@@ -122,7 +130,7 @@ class MybatisPulsApplicationTests {
      */
     @Test
     void testLOGJIDelete(){
-        userMapper.deleteById(2l);
+        userMapper.deleteById(3l);
     }
 
 }
